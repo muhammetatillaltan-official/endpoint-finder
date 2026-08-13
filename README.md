@@ -10,7 +10,7 @@
 ██     ████ ██   ██ ██   ██ ██ ████ ██   ██ ███████
 ```
 
-> *"Harbici buradayız lan!"* — ama izinli hedeflerde. 🔐
+> *"Harbici buradayız lan!"* — ama izinli hedeflerde. 🔐😅
 
 ---
 
