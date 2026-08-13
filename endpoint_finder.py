@@ -69,7 +69,6 @@ except Exception:
 #  El yapimi blok font (figlet olmayan sistemler icin yedek)
 BLOK_FONT = {
     " ": ["     ", "     ", "     ", "     ", "     "],
-
     "E": ["██████ ", "██     ", "█████  ", "██     ", "██████ "],
     "N": ["███   ██", "████  ██", "██ ██ ██", "██  ████", "██   ██"],
     "D": ["██████ ", "██   ██", "██   ██", "██   ██", "██████ "],
@@ -77,17 +76,8 @@ BLOK_FONT = {
     "O": [" █████ ", "██   ██", "██   ██", "██   ██", " █████ "],
     "I": ["███████", "  ███  ", "  ███  ", "  ███  ", "███████"],
     "T": ["███████", "  ███  ", "  ███  ", "  ███  ", "  ███  "],
-
     "F": ["██████ ", "██     ", "█████  ", "██     ", "██     "],
     "R": ["██████ ", "██   ██", "██████ ", "██ ██  ", "██  ██ "],
-
-    "V": ["██   ██", "██   ██", "██   ██", " ██ ██ ", "  ███  "],
-
-    "2": ["██████ ", "     ██", " █████ ", "██     ", "███████"],
-
-    "1": ["  ██   ", " ███   ", "  ██   ", "  ██   ", "███████"],
-
-    ".": ["     ", "     ", "     ", "     ", "  ██ "],
 }
 
 
@@ -133,7 +123,7 @@ def banner_goster():
             tip(renk_dongusu[i % len(renk_dongusu)] + satir + S, 0.0009)
         else:
             print()
-    tip(f"{Y}· v2.1 · Web Endpoint Kesif & Analiz Araci · HackerAI Pentest Lab{S}", 0.001)
+    tip(f"{Y}· v2.1 · Web Endpoint Finder Tool · Muhammet Atilla Altan{S}", 0.001)
     time.sleep(0.4)
 
 
@@ -149,8 +139,8 @@ def bilgi_karti():
 
     print(f"{C}╔{cizgi}╗{S}")
     print(kutu(f" {M}ENDPOINT FINDER{S} {Y}v2.1{S}  |  Web Endpoint Kesif Araci"))
-    print(kutu(f" {W}Yapimci  :{S} {G}HackerAI Pentest Lab{S}"))
-    print(kutu(f" {W}Platform :{S} {G}Python 3.8+  /  Kali uyumlu{S}"))
+    print(kutu(f" {W}Yapimci  :{S} {G}Muhammet Atilla Altan Namıdiğer 987atilla{S}"))
+    print(kutu(f" {W}Platform :{S} {G}Python 3.8+  /  Kali-Termux-iSH uyumlu{S}"))
     print(kutu(f" {R}[!]{S} {W}Sadece izinli hedeflerde kullan!{S}"))
     print(f"{C}╚{cizgi}╝{S}")
 
