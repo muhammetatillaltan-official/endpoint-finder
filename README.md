@@ -33,7 +33,7 @@
 
 ```bash
 # 1. Depoyu çek
-git clone https://github.com/KULLANICI_ADIN/endpoint-finder.git
+git clone https://github.com/muhammetatillaltan-official/endpoint-finder.git
 cd endpoint-finder
 
 # 2. Bağımlılıkları kur
