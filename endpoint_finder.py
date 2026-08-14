@@ -142,7 +142,7 @@ def bilgi_karti():
     print(kutu(f" {W}Yapimci  :{S} {G}Muhammet Atilla Altan{S}"))
     print(kutu(f" {W}Discord  :{S} {G}987atilla{S}"))
     print(kutu(f" {W}Platform :{S} {G}Python 3.8+  /  Kali-Termux-iSH uyumlu{S}"))
-    print(kutu(f" {R}[!]{S} {W}Bu tool içi yapılan haraketler sizin sorumluluğunuzdadır!{S}"))
+    print(kutu(f" {R}[!]{S} {W}SORUMLULUK SİZE AİTTİR!{S}"))
     print(f"{C}╚{cizgi}╝{S}")
 
 
