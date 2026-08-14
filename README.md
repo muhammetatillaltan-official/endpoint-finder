@@ -193,3 +193,7 @@ MIT — detaylar için [LICENSE](LICENSE) dosyasına bakın.
 ## 🙏 Katkı
 
 Pull request'lere ve fikirlere açığız! Yol haritasındaki maddelerden birini üstlenmek isterseniz issue açın, konuşalım. 🤝
+
+## ⭐️ Destek
+
+Bu Github repo’ya sağ üst köşedeki yıldız butoncuğuna basarsan aşırı sevinirim ve minnettar olurum.
