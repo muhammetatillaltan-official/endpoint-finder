@@ -11,7 +11,6 @@
 #  Gerekli : pip install requests beautifulsoup4 colorama
 #            (pyfiglet opsiyonel - banner daha suslu olsun diye)
 #
-#  !!! SADECE YETKILI OLDUGUN HEDEFLERDE KULLAN !!!
 #  Sorumluluk tamamen kullanicidadir.
 # ============================================================
 
