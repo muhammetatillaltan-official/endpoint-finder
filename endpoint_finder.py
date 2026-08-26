@@ -1,19 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-# ============================================================
-#  E N D P O I N T   F I N D E R   v2.1
-#  ----------------------------------------------------------
-#  Amac   : Hedef sitenin endpoint haritasini cikarmak
-#  Detay  : Sayfa gez, link/script/form yakala, JS dosyalarini
-#            kurcala, status kodlarini kontrol et, raporla.
-#  Kullanim: python3 endpoint_finder.py
-#  Gerekli : pip install requests beautifulsoup4 colorama
-#            (pyfiglet opsiyonel - banner daha suslu olsun diye)
-#
-#  Sorumluluk tamamen kullanicidadir.
-# ============================================================
-
 import os
 import re
 import sys
@@ -26,9 +13,6 @@ from datetime import datetime
 from urllib.parse import urljoin, urlparse, urlunparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-# ------------------------------------------------------------
-#  Zorunlu kutuphaneler. Yoksa nazikce uyar ve cik.
-# ------------------------------------------------------------
 try:
     import requests
     from bs4 import BeautifulSoup, Comment
@@ -37,9 +21,6 @@ except ImportError:
     print("    pip install requests beautifulsoup4 colorama")
     sys.exit(1)
 
-# ------------------------------------------------------------
-#  Renkler. colorama yoksa renksiz calis (eski terminal destegi).
-# ------------------------------------------------------------
 try:
     from colorama import init, Fore, Style
     init(autoreset=True)
@@ -63,10 +44,6 @@ try:
 except Exception:
     pass
 
-
-# ------------------------------------------------------------
-#  El yapimi blok font (figlet olmayan sistemler icin yedek)
-# ------------------------------------------------------------
 BLOK_FONT = {
     " ": ["     ", "     ", "     ", "     ", "     "],
     "E": ["██████ ", "██     ", "█████  ", "██     ", "██████ "],
@@ -91,9 +68,6 @@ def ascii_banner(yazi):
     return satirlar
 
 
-# ------------------------------------------------------------
-#  Terminal efektleri
-# ------------------------------------------------------------
 def tip(metin, hiz=0.0015):
     """Karakter karakter yazan tip efektli print."""
     for karakter in metin:
@@ -139,16 +113,14 @@ def bilgi_karti():
 
     print(f"{C}╔{cizgi}╗{S}")
     print(kutu(f" {M}ENDPOINT FINDER{S} {Y}v2.1{S}  |  Web Endpoint Kesif Araci"))
-    print(kutu(f" {W}Yapimci  :{S} {G}Muhammet Atilla Altan{S}"))
-    print(kutu(f" {W}Discord  :{S} {G}987atilla{S}"))
+    print(kutu(f" {W}Yapimci  :{S} {G}sibermareşalatillabey{S}"))
+    print(kutu(f" {W}Discord  :{S} {G}muhammetatillaaltan{S}"))
     print(kutu(f" {W}Platform :{S} {G}Python 3.8+  /  Kali-Termux-iSH uyumlu{S}"))
     print(kutu(f" {R}[!]{S} {W}SORUMLULUK SİZE AİTTİR!{S}"))
     print(f"{C}╚{cizgi}╝{S}")
 
-
-# ------------------------------------------------------------
 #  JS dosyalarinda aranacak endpoint pattern'leri
-# ------------------------------------------------------------
+
 JS_PATERNLERI = [
     (r'fetch\s*\(\s*["\']([^"\']+)["\']',                                                    "FETCH"),
     (r'\.open\s*\(\s*["\'](?:GET|POST|PUT|DELETE|PATCH|OPTIONS)["\']\s*,\s*["\']([^"\']+)["\']', "XHR"),
@@ -159,6 +131,7 @@ JS_PATERNLERI = [
 ]
 
 # GENEL_YOL pattern'inden gelen gurultuyu filtrelemek icin anahtar kelimeler
+
 ANAHTAR_KELIMELER = ["api", "v1", "v2", "v3", "admin", "login", "auth", "token",
                      "user", "search", "upload", "download", "panel", "dashboard",
                      "config", "debug", "test", "backup", "private", "graphql",
